@@ -1,0 +1,57 @@
+import tkinter
+game=tkinter.Tk()
+game.geometry("200x300")
+eq=''
+def enter(n):
+    global eq
+    eq=eq+n
+    exp.set(eq)
+def clear():
+    pass
+def equal():
+    pass
+#global exp
+exp=tkinter.StringVar()
+entry=tkinter.Entry(game,textvariable=exp,bg="black",fg="white",font=('Courier New CYR',16))
+entry.grid(rowspan=2,columnspan=4)
+b1=tkinter.Button(game,text="1",font=("Candara Light",16),command=lambda:enter('1'))
+b1.grid(row=5,column=0)
+b2=tkinter.Button(game,text="2",font=("Candara Light",16),command=lambda:enter('2'))
+b2.grid(row=5,column=1)
+b3=tkinter.Button(game,text="3",font=("Candara Light",16),command=lambda:enter('3'))
+b3.grid(row=5,column=2)
+b4=tkinter.Button(game,text="4",font=("Candara Light",16),command=lambda:enter('4'))
+b4.grid(row=4,column=0)
+b5=tkinter.Button(game,text="5",font=("Candara Light",16),command=lambda:enter('5'))
+b5.grid(row=4,column=1)
+b6=tkinter.Button(game,text="6",font=("Candara Light",16),command=lambda:enter('6'))
+b6.grid(row=4,column=2)
+b7=tkinter.Button(game,text="7",font=("Candara Light",16),command=lambda:enter('7'))
+b7.grid(row=3,column=0)
+b8=tkinter.Button(game,text="8",font=("Candara Light",16),command=lambda:enter('8'))
+b8.grid(row=3,column=1)
+b9=tkinter.Button(game,text="9",font=("Candara Light",16),command=lambda:enter('9'))
+b9.grid(row=3,column=2)
+b0=tkinter.Button(game,text="0",font=("Candara Light",16),command=lambda:enter('0'))
+b0.grid(row=6,column=1)
+c=tkinter.Button(game,text="clr",font=("Candara Light",16),command=lambda:clear)
+c.grid(row=2,column=0)
+add=tkinter.Button(game,text="+",font=("Candara Light",16),command=lambda:enter('+'))
+add.grid(row=6,column=3)
+sub=tkinter.Button(game,text="-",font=("Candara Light",16),command=lambda:enter('-'))
+sub.grid(row=5,column=3)
+div=tkinter.Button(game,text="/",font=("Candara Light",16),command=lambda:enter('/'))
+div.grid(row=4,column=3)
+mul=tkinter.Button(game,text="*",font=("Candara Light",16),command=lambda:enter('*'))
+mul.grid(row=3,column=3)
+mod=tkinter.Button(game,text="%",font=("Candara Light",16),command=lambda:enter('%'))
+mod.grid(row=2,column=3)
+eq=tkinter.Button(game,text="=",font=("Candara Light",16),command=lambda:equal)
+eq.grid(row=6,column=2)
+dot=tkinter.Button(game,text=".",font=("Candara Light",16),command=lambda:enter('.'))
+dot.grid(row=6,column=0)
+sq=tkinter.Button(game,text="^2",font=("Candara Light",16),command=lambda:enter('^2'))
+sq.grid(row=2,column=2)
+sqroot=tkinter.Button(game,text="\u221A",font=("Candara Light",16),command=lambda:enter('\u221A'))
+sqroot.grid(row=2,column=1)
+game.mainloop()
